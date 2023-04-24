@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+<div class="container-fluid" id="players">
+<h1>Players</h1>
+
+<table class="table table-info table-striped table-hover">
+  <thead>
+    <tr>
+    <th>Name</th>
+    <th>Score</th>
+    <th>Show</th>
+    </tr>
+  </thead>
+  <% @players.each do |player| %>
+  <tr>
+    <%= render player %>
+    
+     <td> <%= link_to "Show this player", player %></td>
+  </tr>
+  <% end %>
+
+
+  <%= link_to "New player", new_player_path %>
+  
+</div>
+
+
