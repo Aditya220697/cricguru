@@ -1,10 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="container-fluid" id="matches">
+<div class="container-fluid">
   
 <h1>Matches</h1>
 
-<table class="table table-info table-striped table-hover">
+<table class="table table-info table-striped table-hover" style="text-align: center;">
   <thead>
     <tr>
     <th>Title</th>
@@ -21,6 +21,7 @@
   </thead>
   <% @matches.each do |match| %>
   <tr>
+
     <%= render match %>
     
    <td> <%= link_to "Show this match", match, class: "btn btn-info" %></td>
@@ -30,5 +31,5 @@
   <% end %>
 </table>
 
-  <%= link_to "New match", new_match_path , class=%>
+  <%= link_to "New match", new_match_path , class: "btn btn-primary" %>
 </div>

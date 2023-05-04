@@ -3,7 +3,7 @@
 <div class="container-fluid" id="teams">
 <h1>Teams</h1>
 
-<table class="table table-success table-striped table-hover">
+<table class="table table-success table-striped table-hover" style="text-align: center;">
   <thead>
     <tr>
     <th>Name</th>
@@ -16,8 +16,8 @@
   <% @teams.each do |team| %>
   <tr>
     <%= render team %>
-     <td><%= link_to "Show this team", team %></td>
-     <td><%= link_to "Show Players", players_path %></td>
+     <td><%= link_to "Show this team", team , class: "btn btn-info" %></td>
+     <td><%= link_to "Show players", players_path(id: team.id), class: "btn btn-info" %></td>
   </tr>
   <% end %>
 </table>

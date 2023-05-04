@@ -13,7 +13,14 @@ class Tasklist < Grape::API
                     Taskdata = []                
                     TaskList = Task.all
                     TaskList.each do |task|
-                       Taskdata << {id: task.id,title: task.title,task: task.task,points: task.points,reward: task.reward,logo: task.logo}
+                       Taskdata << {
+                        id: task.id, 
+                        title: task.title,
+                        task: task.task, 
+                        points: task.points,
+                        reward: task.reward,
+                        logo: task.logo
+                    }
                     end               
                 {message: 'MSG_SUCCESS', status: 200, TaskList: Taskdata}
                 else

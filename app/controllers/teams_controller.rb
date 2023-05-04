@@ -1,6 +1,12 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: %i[ show edit update destroy ]
 
+
+  def players
+    @team = Team.find(params[:id])
+    @players = @team.players
+  end
+  
   # GET /teams or /teams.json
   def index
     @teams = Team.all
