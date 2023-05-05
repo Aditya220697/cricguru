@@ -20,7 +20,7 @@ module Dash
     # config.eager_load_paths << Rails.root.join("extras")
     # Allow requests from subdomains like `www.product.com` and
     # `beta1.product.com`.
-    Rails.application.config.hosts << "0602-2401-4900-1c74-fb9a-b5d0-e34-ede0-7cfe.ngrok-free.app"
+    Rails.application.config.hosts.clear
 
   end
 end
