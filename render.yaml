@@ -19,12 +19,12 @@
 
 databases:
   - name: aditya
-    databaseName: aditya_10td
-    user: aditya_10td_user
+    databaseName: aditya_6vzy
+    user: aditya_6vzy_user
 
 services:
   - type: web
-    name: aditya
+    name: dashboard
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
