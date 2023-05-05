@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :rewards
   resources :points
   resources :withdrawls
-  resources :transactions
+  # resources :transactions
   resources :accounts
   resources :appopens
   resources :users
