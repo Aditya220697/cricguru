@@ -21,5 +21,12 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  # <<: *default
+  adapter: postgresql
+  encoding: unicode 
+  database: aditya_10td
+  pool: 5
+  # database: db/production.sqlite3
+  username: aditya_10td_user
+  password: uAbx4hRycAWlEfmZwpZsiSHixhSepZvu
+  url: postgres://aditya_10td_user:uAbx4hRycAWlEfmZwpZsiSHixhSepZvu@dpg-ch9rr11jvhtimrb3b230-a/aditya_10td
