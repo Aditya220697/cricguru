@@ -1,9 +1,11 @@
 <p style="color: green"><%= notice %></p>
 <div class="container-fluid">
 
-<h1>Applists</h1>
+  <div class="d-flex justify-content-between align-items-center">
+    <h1>Applists</h1>
+    <%= link_to "New applist", new_applist_path, class: "btn btn-outline-primary" %>
+  </div>
 
-<%= link_to "New applist", new_applist_path, class: "btn btn-outline-primary" %>
 <table class="table table-success table-striped table-hover" style="text-align: center;">
   <thead>
     <tr>

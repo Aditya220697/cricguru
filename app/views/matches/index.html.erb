@@ -2,7 +2,10 @@
 
 <div class="container-fluid">
   
-<h1>Matches</h1>
+<div class="d-flex justify-content-between align-items-center">
+  <h1>Matches</h1>
+  <%= link_to "New match", new_match_path , class: "btn btn-primary" %>
+</div>
 
 <table class="table table-info table-striped table-hover" style="text-align: center;">
   <thead>
@@ -31,5 +34,4 @@
   <% end %>
 </table>
 
-  <%= link_to "New match", new_match_path , class: "btn btn-primary" %>
 </div>

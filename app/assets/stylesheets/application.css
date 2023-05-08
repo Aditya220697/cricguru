@@ -1,3 +1,23 @@
-/* .container{
-    text-align: center;
-} */
+.btn-primary{
+    background-color:darkslateblue;
+}
+
+.btn-primary:hover{
+    background-color: darkblue;
+}
+
+.table{
+ background-color: darkolivegreen;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(120, 140, 153);
+    }
+
+   tr:nth-child(even) {
+    background-color: rgb(87, 123, 108);
+    }
+
+    th {
+       background-color: rgb(120, 231, 231);
+    }

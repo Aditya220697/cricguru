@@ -1,9 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
 <div class="container-fluid">
-<h1>Users</h1>
-<%= link_to "New user", new_user_path , class: "btn btn-outline-info" %>
 
+  <div class="d-flex justify-content-between align-items-center">
+    <h1>Users</h1>
+    <%= link_to "New user", new_user_path , class: "btn btn-outline-info" %>
+  </div>
 <table class="table table-dark table-striped table-hover" style="text-align: center;">
   <thead>
     <tr>
