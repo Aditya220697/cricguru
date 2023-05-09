@@ -3,7 +3,7 @@ class PointsController < ApplicationController
 
   # GET /points or /points.json
   def index
-    @points = Point.all
+    @points = Point.all.paginate(:page => params[:page], :per_page => 6)
   end
 
   # GET /points/1 or /points/1.json

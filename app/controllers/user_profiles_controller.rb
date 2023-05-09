@@ -3,7 +3,7 @@ class UserProfilesController < ApplicationController
 
   # GET /user_profiles or /user_profiles.json
   def index
-    @user_profiles = UserProfile.all
+    @user_profiles = UserProfile.all.paginate(:page => params[:page], :per_page => 6)
   end
 
   # GET /user_profiles/1 or /user_profiles/1.json

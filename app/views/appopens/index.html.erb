@@ -27,5 +27,10 @@
     </td>
   </tr>
   <% end %>
+</table>
+  <div class="d-flex justify-content-between">
+    <%= will_paginate @teams,renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+    <span><%= page_entries_info(@teams)%></span>
+  </div>
 </div>
 

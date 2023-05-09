@@ -3,10 +3,11 @@ class PlayersController < ApplicationController
 
   # GET /players or /players.json
   def index
+    
     if params[:id]
-     @players= Player.where(:team_id => params[:id])
+     @players= Player.where(:team_id => params[:id]).paginate(:page => params[:page], :per_page => 6)
     else 
-     @players = Player.all
+     @players = Player.paginate(:page => params[:page], :per_page => 6)    
     end
   end
 
@@ -57,7 +58,7 @@ class PlayersController < ApplicationController
     @player.destroy
 
     respond_to do |format|
-      format.html { redirect_to players_url, notice: "Player was successfully destroyed." }
+      format.html { redirect_to player_url(@player), notice: "Player was successfully destroyed." }
       format.json { head :no_content }
     end
   end

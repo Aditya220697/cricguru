@@ -24,5 +24,10 @@
     </td>
   </tr>
   <% end %>
+  </table>
+  <div class="d-flex justify-content-between">
+    <%= will_paginate @rewards , renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+    <span><%= page_entries_info(@rewards)%></span>
+  </div>
 </div>
 

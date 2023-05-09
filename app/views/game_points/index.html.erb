@@ -4,7 +4,7 @@
       <h1>Game points</h1>
       <%= link_to "New game point", new_game_point_path, class: "btn btn-outline-primary" %>
   </div>
-<br><br>
+<br>
 <table class="table table-success table-striped table-hover" style="text-align: center;">
   <thead>
     <tr>
@@ -33,7 +33,10 @@
     </td>
   </tr>
   <% end %>
-</div>
-
 </table>
+<div class="d-flex justify-content-between">
+  <%= will_paginate @teams,renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+  <span><%= page_entries_info(@teams)%></span>
+</div>
+</div>
 

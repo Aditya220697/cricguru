@@ -3,7 +3,7 @@ class AppopensController < ApplicationController
 
   # GET /appopens or /appopens.json
   def index
-    @appopens = Appopen.all
+    @appopens = Appopen.all.paginate(:page => params[:page], :per_page => 6)
   end
 
   # GET /appopens/1 or /appopens/1.json

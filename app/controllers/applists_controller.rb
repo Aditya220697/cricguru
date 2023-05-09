@@ -3,7 +3,7 @@ class ApplistsController < ApplicationController
 
   # GET /applists or /applists.json
   def index
-    @applists = Applist.all
+    @applists = Applist.all.paginate(:page => params[:page], :per_page => 6)
   end
 
   # GET /applists/1 or /applists/1.json

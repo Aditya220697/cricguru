@@ -3,7 +3,7 @@ class WithdrawlsController < ApplicationController
 
   # GET /withdrawls or /withdrawls.json
   def index
-    @withdrawls = Withdrawl.all
+    @withdrawls = Withdrawl.all.paginate(:page => params[:page], :per_page => 6)
   end
 
   # GET /withdrawls/1 or /withdrawls/1.json

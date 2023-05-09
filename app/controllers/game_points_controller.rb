@@ -3,7 +3,7 @@ class GamePointsController < ApplicationController
 
   # GET /game_points or /game_points.json
   def index
-    @game_points = GamePoint.all
+    @game_points = GamePoint.all.paginate(:page => params[:page], :per_page => 6)
   end
 
   # GET /game_points/1 or /game_points/1.json

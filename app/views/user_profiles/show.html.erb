@@ -1,10 +1,32 @@
 <p style="color: green"><%= notice %></p>
 
+<div class="container-fluid">
+
+<table class="table table-success table-striped table-hover" style="text-align: center;">
+  <thead>
+    <tr>
+
+    <!-- <th>Sr No</th> -->
+    <th>Full Name</th>
+    <th>Email</th>
+    <th>Mobile Number</th>
+    <th>Gender</th>
+    <th>Location</th>
+    <th>Occupation</th>
+    <th>Birth date</th>
+    <th>Profile Pic</th>
+    <th>User_id</th>
+    <th>Edit</th>
+    <th>Back</th>
+    <th>Destory</th>
+    </tr>
+  </thead>
+
+<tr>
 <%= render @user_profile %>
 
-<div>
-  <%= link_to "Edit this user profile", edit_user_profile_path(@user_profile) %> |
-  <%= link_to "Back to user profiles", user_profiles_path %>
-
-  <%= button_to "Destroy this user profile", @user_profile, method: :delete %>
+ <td> <%= link_to "Edit this user profile", edit_user_profile_path(@user_profile) , class: "btn btn-primary" %></td>
+ <td><%= link_to "Back to user profiles", user_profiles_path, class: "btn btn-primary" %></td>
+ <td><%= button_to "Destroy this user profile", @user_profile, method: :delete, class: "btn btn-primary" %></td>
+</tr>
 </div>
